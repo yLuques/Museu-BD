@@ -31,7 +31,7 @@ CREATE TABLE ITEM_ACERVO (
     data_cadastro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     data_alteracao DATETIME(2) NOT NULL DEFAULT CURRENT_TIMESTAMP(2)
                    ON UPDATE CURRENT_TIMESTAMP(2),
-    id_usuario_cadastro INT NOT NULL,
+    id_usuario_cadastro UUID NOT NULL,
      FOREIGN KEY (id_categoria) REFERENCES CATEGORIA(id_categoria),
      FOREIGN KEY (id_usuario_cadastro) REFERENCES USUARIO(id_usuario)
 );
